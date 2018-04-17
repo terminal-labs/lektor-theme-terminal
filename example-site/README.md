@@ -6,7 +6,7 @@ This is a stand-alone repository for a very simple example site that uses the Te
 
 There are [screenshots available](screenshots), including this
 
-![image of subnav page](screenshots/page_with_subnav.png)
+![image of subnav page](https://github.com/terminal-labs/lektor-theme-terminal/blob/master/images/page_with_subnav.png)
 
 # Configuration
 
