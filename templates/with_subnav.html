@@ -1,0 +1,46 @@
+{% extends "page.html" %}
+{# This is a normal page with a subnav #}
+
+{% block content %}
+  {% block subnavbar %}
+    <div class="nav_menu_bar_tier_2 green_border">
+      <div class="table">
+        {# This finds the correct main nav page to generate the subnav
+        whether we're on a main nav or subnav page #}
+        {% if this.parent._path == '/' %} {# direct child of root #}
+          {% set main_nav_page = site.get(this._id) %}
+        {% else %} {# grandchild of root #}
+          {% set main_nav_page = site.get(this.parent._id) %}
+        {% endif %}
+
+        {# generate subnav #}
+        {% for sub_page in main_nav_page.children.order_by('position') %}
+
+          {# set thumbnail with a loading gif backup #}
+          {% if sub_page.page_thumb %}
+            {% set sub_page_thumb = sub_page.record.attachments.images.get(sub_page.page_thumb) %}
+          {% else %}
+            {% set sub_page_thumb = "" %}
+          {% endif %}
+          <a draggable="false" href="{{ sub_page|url }}">
+            <div class='nav_menu_tier_2'>
+              <img draggable="false" src="{{ sub_page_thumb|url }}">
+              <div class="nav_menu_tier_2_text">
+                {{ sub_page.title }}
+              </div>
+              {% if this == sub_page %}
+                <div class="link_underline"></div><br>
+              {% endif %}
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endblock subnavbar %}
+
+  <div class="content_box">
+    {% block body_content %}
+      {{ this.body }}
+    {% endblock body_content %}
+  </div>
+{% endblock content %}

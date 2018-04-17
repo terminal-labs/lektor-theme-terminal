@@ -1,0 +1,26 @@
+{% extends "page.html" %}
+
+{% from "macros/blog.html" import render_blog_post %}
+{% from "macros/blog.html" import render_blog_sibling_nav %}
+{% from "macros/pagination.html" import render_pagination %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block content %}
+  <div class="content_box">
+    {{ this.body }}
+    {% for child in this.pagination.items.order_by('-pub_date', '-title') %}
+      <p>
+        <a href="{{ child.path }}">
+          {% if child.subtitle %}
+            {{ child.title }}: {{ child.subtitle }}
+          {% else %}
+            {{ child.title }}
+          {% endif %}
+        </a>
+      </p>
+    {% endfor %}
+
+    {% if this.pagination.pages > 1 %}
+      {{ render_pagination(this.pagination) }}
+    {% endif %}
+  </div>
+{% endblock content %}

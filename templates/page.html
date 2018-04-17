@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  {% include "includes/header.html" %}
+  <body>
+    <div class="top_row">
+      {% include "includes/logo.html" %}
+      {% include "includes/social_box.html" %}
+    </div>
+    {% include "includes/navbar.html" %}
+    {% block content %}
+      <div class="content_box">
+        {% block body_content %}
+          {{ this.body }}
+        {% endblock body_content %}
+      </div>
+    {% endblock content %}
+  </body>
+  {% include "includes/footer.html" %}
+</html>

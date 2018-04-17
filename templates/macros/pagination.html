@@ -1,0 +1,13 @@
+{% macro render_pagination(pagination) %}
+  <div class="blog-nav">
+    {% if pagination.has_prev %}
+      <a href="{{ pagination.prev|url }}">&laquo; Previous</a>
+    {% endif %}
+    {% if (pagination.has_prev and pagination.has_next) %}
+      | {{ pagination.page }} |
+    {% endif %}
+    {% if pagination.has_next %}
+      <a href="{{ pagination.next|url }}">Next &raquo;</a>
+    {% endif %}
+  </div>
+{% endmacro %}

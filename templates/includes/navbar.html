@@ -1,0 +1,14 @@
+<nav id='nav_menu_bar'>
+  {% for child in site.get('/').children.order_by('position', 'name') %}
+    {% if child.nav_bar %}
+      <a draggable="false" href="{{ child|url }}">
+        <div class='nav_menu green_border'>
+          {{ child.title }}
+          {% if this == child %}
+            <div class="link_underline"></div>
+          {% endif %}
+        </div>
+      </a>
+    {% endif %}
+  {% endfor %}
+</nav>

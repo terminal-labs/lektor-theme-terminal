@@ -1,0 +1,13 @@
+<title>{% block meta_title %}{% endblock %}</title>
+<!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
+<!--[if IE]><link rel="shortcut icon" href="{{ '/static/images/favicons/favicon.ico'|asseturl }}"><![endif]-->
+
+<!-- Touch Icons - iOS and Android 2.1+ 180x180 pixels in size. -->
+<link rel="apple-touch-icon-precomposed" href="{{ '/static/images/favicons/apple-touch-icon-precomposed.png'|asseturl }}">
+
+<!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+<link rel="icon" href="{{ '/static/images/favicons/favicon.png'|asseturl }}">
+
+<meta charset="UTF-8">
+<meta name="description" content="{{ this.meta_description or this._slug }}">
+<meta name="keywords" content="{{ this.meta_keywords or this._slug }}">

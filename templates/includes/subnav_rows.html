@@ -1,0 +1,21 @@
+{# needs to have 'width' passed in from the include #}
+
+{% for subnav_item in this.SubNav.blocks %} {# finds all blocks in SubNav model #}
+  <div>
+    {% if not loop.index == 1 %}
+      <div class="item_spacing"></div>
+    {% endif %}
+
+    {% set img = subnav_item.images.blocks[0] %}
+    {% set thumb = this.record.attachments.images.get(img.image) %}
+    <div class="item_image" style="width: {{ width|string }}px;">
+      {% if thumb.width >= width %}
+        {% set thumb = thumb.thumbnail(width) %}
+      {% endif %}
+      <img src="{{ thumb|url }}" title="{{ img.title }}">
+    </div>
+    <div class="item_text" style="width: {{ (900 - width)|string }}px;">
+      {{ subnav_item.body }}
+    </div>
+  </div>
+{% endfor %}
