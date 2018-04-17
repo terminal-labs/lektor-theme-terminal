@@ -1,6 +1,6 @@
 # Terminal
 
-Terminal is a simple Lektor theme made from [terminallabs.com](terminallabs.com), which is meant to be evocative of an old Linux terminal, boxy and green on black.
+Terminal is a simple Lektor theme made from [terminallabs.com](terminallabs.com), which is meant to be evocative of an old Linux terminal; boxy and green on black.
 
 # Configuration
 
@@ -8,7 +8,7 @@ Create a `404.html/contents.lr` content file pointing to 404.html, using a none 
 
 Create a `contents.lr` content file pointing to index.html, using a none model
 
-Add lektor-disqus-comments plugin an configure it https://github.com/lektor/lektor-disqus-comments#lektor-disqus-comments
+Optionally turn on add Disqus Comments on the blog posts with lektor-disqus-comments plugin. Configure it with [this](https://github.com/lektor/lektor-disqus-comments#lektor-disqus-comments)
 
 Add params in the `.lektorproject file`
 
