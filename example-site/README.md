@@ -4,7 +4,7 @@ Terminal is a simple Lektor theme made from [terminallabs.com](https://terminall
 
 This is a stand-alone repository for a very simple example site that uses the Terminal theme. You can check it out and simply run `lektor server`, and it will just work. It  is pre-configured.
 
-There are [screenshots available](screenshots), including this
+There are [screenshots available](https://github.com/terminal-labs/lektor-theme-terminal/tree/master/images), including this
 
 ![image of subnav page](https://github.com/terminal-labs/lektor-theme-terminal/blob/master/images/page_with_subnav.png)
 
