@@ -14,6 +14,13 @@
     <meta charset="UTF-8">
     <meta name="description" content="{{ this.meta_description or this._slug }}">
     <meta name="keywords" content="{{ this.meta_keywords or this._slug }}">
+    {# TODO: enable something like the following by testing for these filters first #}
+    {#{% if (striphtmltags is defined) and (firstsentence is defined) %}
+      <meta name="description" content="{{ this.meta_description or this.body|striphtmltags|firstsentence or this._slug }}">
+    {% endif %}
+    {% if (striphtmltags is defined) and (keywords is defined) %}
+      <meta name="keywords" content="{{ this.meta_keywords or this.body|striphtmltags|keywords|join(', ') or this._slug }}">
+    {% endif %}#}
 
 
     {% block header_scripts %}
