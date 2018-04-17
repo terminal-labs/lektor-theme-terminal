@@ -114,6 +114,9 @@ a.inactive {
   padding: 0 8px;
   border-left: 2px solid #2f9a41;
 }
+.logo_box:first-child {
+  border-left: none;
+}
 .social_box {
   position: absolute;
   right: 0px;
