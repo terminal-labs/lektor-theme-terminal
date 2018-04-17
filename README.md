@@ -20,6 +20,7 @@ Add params in the `.lektorproject file`
   linkedInURL = "your_linkedin"
   facebookID = "your_facebook"
   pinterestID = "your_pinterest"
+  sticky_flat_page = "Special Flatpage that goes in the top right by the Social Buttons!"
 ```
 
 
