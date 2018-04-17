@@ -1,0 +1,19 @@
+
+[project]
+name = terminal
+url = https://terminallabs.com
+# Need external. # Switch to absolute in dev for static file paths.
+url_style = absolute
+
+
+[theme_settings]
+  linkedInURL = "http://www.linkedin.com/company/terminal-labs"
+  twitterID = "terminal_labs"
+  pinterestID = "terminallabs"
+  facebookID = "terminallabs"
+  sticky_flat_page = "Repos/Downloads"
+  logo_subtext = "Python Mercenaries"
+
+[packages]
+lektor-slugify = 0.2
+lektor-disqus-comments = 0.2

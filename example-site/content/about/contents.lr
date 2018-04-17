@@ -1,0 +1,17 @@
+title: About this Website
+---
+body:
+
+This is a website that was made with the Lektor quickstart.
+
+And it does not contain a lot of information.
+---
+meta_description: description
+---
+meta_keywords: key words
+---
+nav_bar: yes
+---
+position: 1
+---
+_template: with_subnav.html

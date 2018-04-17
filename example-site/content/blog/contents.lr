@@ -1,0 +1,7 @@
+_model: blog
+---
+title: Blog
+---
+nav_bar: yes
+---
+position: 10
