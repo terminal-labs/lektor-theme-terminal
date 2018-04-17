@@ -24,6 +24,7 @@
   </div>
   {{ render_blog_sibling_nav(post) }}
   {% if render_disqus_comments is defined %}
+    <br>
     <div class="comments">{{ render_disqus_comments() }}</div>
   {% endif %}
 {% endmacro %}

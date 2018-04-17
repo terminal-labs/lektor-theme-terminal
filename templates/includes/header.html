@@ -1,7 +1,8 @@
 <head>
-  {% include "includes/custom_head.html" %}
+  {% block head %}
+    {% include "includes/head.html" %}
+  {% endblock head %}
 
-  <link rel="stylesheet" href="{{ '/static/css/terminal.css'|asseturl }}" type="text/css" media="all">
   {% block header_scripts %}
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
