@@ -4,6 +4,8 @@ Terminal is a simple Lektor theme made from [terminallabs.com](https://terminall
 
 ![example-site image](https://github.com/terminal-labs/lektor-theme-terminal/blob/master/images/page_with_subnav.png)
 
+There is a fully functional example-site you can try out [here](https://github.com/terminal-labs/lektor-theme-terminal/tree/master/example-site).
+
 # Configuration
 
 Create a `404.html/contents.lr` content file pointing to 404.html, using a none model [see Lektor docs](https://www.getlektor.com/docs/guides/error-pages)
