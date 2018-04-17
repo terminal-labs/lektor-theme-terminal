@@ -1,6 +1,8 @@
 # Terminal
 
-Terminal is a simple Lektor theme made from [terminallabs.com](terminallabs.com), which is meant to be evocative of an old Linux terminal; boxy and green on black.
+Terminal is a simple Lektor theme made from [terminallabs.com](https://terminallabs.com), which is meant to be evocative of an old Linux terminal; boxy and green on black.
+
+![example-site image](https://github.com/terminal-labs/lektor-theme-terminal/blob/master/images/page_with_subnav.png)
 
 # Configuration
 
