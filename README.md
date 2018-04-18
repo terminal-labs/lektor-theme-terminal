@@ -12,7 +12,7 @@ Create a `404.html/contents.lr` content file pointing to 404.html, using a none 
 
 Create a `contents.lr` content file pointing to index.html, using a none model
 
-Optionally turn on add Disqus Comments on the blog posts with lektor-disqus-comments plugin. Configure it with [this](https://github.com/lektor/lektor-disqus-comments#lektor-disqus-comments)
+Optionally turn on add Disqus Comments on the blog posts with lektor-disqus-comments plugin. Configure it with [this](https://github.com/lektor/lektor-disqus-comments#lektor-disqus-comments). Also optionally you can have an Atom RSS feed setup for the blog, with the lektor-atom plugin.
 
 Add params in the `.lektorproject file`
 
