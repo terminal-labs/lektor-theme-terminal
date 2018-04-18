@@ -1,5 +1,8 @@
 {% macro render_blog_post(post, from_index=false) %}
   {% from "macros/pagination.html" import render_pagination %}
+  {% if config.PACKAGES['lektor-atom'] %}
+    <div id='rss-link'><p><a type=application/atom+xml href="{{ '@atom/feed'|url }}">Atom RSS Feed</a></p></div>
+  {% endif %}
   <div class="blog-post">
     {% if from_index %}
       <h1><a href="{{ post|url }}">{{ post.title }}</a></h1>

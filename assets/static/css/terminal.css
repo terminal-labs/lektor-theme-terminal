@@ -50,6 +50,7 @@ body {
   line-height: 40px;
 }
 .content_box {
+  position: relative;
   border: 2px solid #2f9a41;
   margin-top: 10px;
   padding: 10px;
@@ -144,6 +145,11 @@ a.inactive {
   margin-left: 30px;
   vertical-align: top;
   display: inline-block;
+}
+#rss-link {
+  position: absolute;
+  right: 0px;
+  padding-right: 10px;
 }
 .addon_fonts_options {
   font-style: normal;

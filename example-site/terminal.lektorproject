@@ -17,3 +17,4 @@ url_style = absolute
 [packages]
 lektor-slugify = 0.2
 lektor-disqus-comments = 0.2
+lektor-atom = 0.2
