@@ -18,13 +18,13 @@ Add params in the `.lektorproject file`
 
 ```ini
 [theme_settings]
-  googleanalytics = "your_google_analytics_id"
-  logo_subtext = "your tagline"
-  twitterID = "your_twitter"
-  linkedInURL = "your_linkedin"
-  facebookID = "your_facebook"
-  pinterestID = "your_pinterest"
-  sticky_flat_page = "Special Flatpage that goes in the top right by the Social Buttons!"
+googleanalytics = your_google_analytics_id
+logo_subtext = your tagline
+twitterID = your_twitter
+linkedInURL = your_linkedin
+facebookID = your_facebook
+pinterestID = your_pinterest
+sticky_flat_page = Special Flatpage that goes in the top right by the Social Buttons!
 ```
 
 
