@@ -3,6 +3,7 @@
 @dark_gray: #202020;
 @light_gray: #808080;
 @lightest_gray: #C0C0C0;
+@white: #F5F5F5;  // Actuall gray99
 @default_line_height: 40px;
 @logo_box_height: 28px;
 @grid_width: 980px; // <body> has 8px margin on both sides, effective 964px width
@@ -22,7 +23,7 @@ footer {
   text-align: right;
 }
 body {
-  color: @lightest_gray;
+  color: @white;
   background-color: black;
   font: @std_font;
   max-width: @grid_width;
@@ -87,14 +88,14 @@ body {
 }
 .unformatted {
   text-decoration: none;
-  color: @lightest_gray;
+  color: @white;
 }
 a:link, a:visited {
-  color: @lightest_gray;
+  color: @white;
   text-decoration: none;
 }
 a:hover, a:active {
-  color: @lightest_gray;
+  color: @white;
 }
 a.active, a.active a:hover {
   text-decoration: underline;
