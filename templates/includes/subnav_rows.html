@@ -9,10 +9,39 @@
     {% set img = subnav_item.images.blocks[0] %}
     {% set thumb = this.record.attachments.images.get(img.image) %}
     <div class="item_image" style="width: {{ width|string }}px;">
-      {% if thumb.width >= width %}
+      {% if thumb.format == 'svg' or thumb.width >= width %}
         {% set thumb = thumb.thumbnail(width) %}
       {% endif %}
-      <img src="{{ thumb|url }}" title="{{ img.title }}">
+
+      {% if img.background_color %}
+        {% if img.padding %}
+          {% set img_style = ' style="background-color: '|safe
+          ~ img.background_color
+          ~ "; padding: "
+          ~ img.padding
+          ~ ';"'|safe %}
+        {% else %}
+          {% set img_style = ' style="background-color: '|safe
+          ~ img.background_color
+          ~ ';"'|safe %}
+        {% endif %}
+      {% else %}
+        {% if img.padding %}
+          {% set img_style = ' style="padding: '|safe
+          ~ img.padding
+          ~ ';"'|safe %}
+        {% else %}
+          {% set img_style = "" %}
+        {% endif %}
+      {% endif %}
+
+      {% if img.title %}
+        {% set img_title = ' title="'|safe ~ img.title ~ '"'|safe %}
+      {% else %}
+        {% set img_title = "" %}
+      {% endif %}
+
+      <img src="{{ thumb|url }}"{{ img_title }}{{ img_style }}>
     </div>
     <div class="item_text" style="width: {{ (900 - width)|string }}px;">
       {{ subnav_item.body }}

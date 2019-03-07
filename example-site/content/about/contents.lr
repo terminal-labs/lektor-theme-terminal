@@ -13,5 +13,3 @@ meta_keywords: key words
 nav_bar: yes
 ---
 position: 1
----
-_template: with_subnav.html
