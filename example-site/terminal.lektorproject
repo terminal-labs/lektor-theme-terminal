@@ -2,7 +2,6 @@
 [project]
 name = terminal
 url = https://terminallabs.com
-# Need external. # Switch to absolute in dev for static file paths.
 url_style = absolute
 
 
