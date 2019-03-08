@@ -8,11 +8,10 @@ There is a fully functional example-site you can try out [here](https://github.c
 
 # Configuration
 
-Create a `404.html/contents.lr` content file pointing to 404.html, using a none model [see Lektor docs](https://www.getlektor.com/docs/guides/error-pages)
-
-Create a `contents.lr` content file pointing to index.html, using a none model
-
-Optionally turn on add Disqus Comments on the blog posts with lektor-disqus-comments plugin. Configure it with [this](https://github.com/lektor/lektor-disqus-comments#lektor-disqus-comments). Also optionally you can have an Atom RSS feed setup for the blog, with the lektor-atom plugin.
+- **404 Page**:Create a normal `Page` entitled 404.html, with `404.html/contents.lr`.
+- **Social Links**: Create a page of model `Social` and path `social-networks` and add social media links with flowblocks. This page is included in the page.html template and isn't meant for direct display, so it's template is in the include/ directory and it does not have normal style, so add `_hidden: yes` and `_template: includes/social_networks.html` to it's contents.lr file.
+- **Disqus**: Turn on add Disqus Comments on the blog posts with lektor-disqus-comments plugin. Configure it with [this](https://github.com/lektor/lektor-disqus-comments#lektor-disqus-comments).
+- **RSS**: Create an Atom RSS feed setup for the blog by using the `lektor-atom` plugin. The templates are ready to go. See the example project here if you need help.
 
 Remember, everything in this theme can be overridden.
 
@@ -20,17 +19,12 @@ Add params in the `.lektorproject file`. All params are optional unless otherwis
 
 ```ini
 [theme_settings]
-  behanceID = "your_facebook"
-  facebookID = "your_facebook"
   googleanalytics = "your_google_analytics_id"
-  linkedInURL = "your_linkedin"
   # file in assets/static/images/
   logo_file = "logo.png"
   logo_subtext = "your tagline"
   logo_width = "width for logo <img>"
-  pinterestID = "your_pinterest"
   sticky_flat_page = "Special Flatpage that goes in the top right by the Social Buttons!"
-  twitterID = "your_twitter"
 ```
 
 

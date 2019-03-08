@@ -1,0 +1,26 @@
+_model: social_networks
+---
+_hidden: yes
+---
+_template: includes/social_networks.html
+---
+title: Social Networks
+---
+Social:
+
+#### social ####
+link_text: in
+----
+url: http://www.linkedin.com/company/terminal-labs
+#### social ####
+link_text: t
+----
+url: https://twitter.com/terminal_labs
+#### social ####
+link_text: f
+----
+url: https://www.facebook.com/terminallabs
+#### social ####
+link_text: g
+----
+url: https://github.com/terminal-labs/

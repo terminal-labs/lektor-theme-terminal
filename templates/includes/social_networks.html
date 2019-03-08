@@ -1,0 +1,25 @@
+{# This file is "included" by page.html, but always only looks for flow blocks
+in it's own hardcoded location #}
+{% if site.get('social-networks') or config.THEME_SETTINGS.sticky_flat_page %}
+  <div class="social_box green_border">
+    {% if config.THEME_SETTINGS.sticky_flat_page %}
+      <div class="logo_box">
+        <a draggable="false" href="/{{ config.THEME_SETTINGS.sticky_flat_page|slug }}">
+          {{ config.THEME_SETTINGS.sticky_flat_page }}
+        </a>
+      </div>
+    {% endif %}
+
+    {# finds all blocks in Social model. #}
+    {% set social_page = site.get('social-networks') %}
+    {% if social_page %}
+      {% if social_page.Social %}
+        {% for net in social_page.Social.blocks %}
+          <div class="logo_box">
+            <a href="{{net.url}}" target="_blank">{{ net.link_text }}</a>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+  </div>
+{% endif %}
