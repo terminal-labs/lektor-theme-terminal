@@ -140,6 +140,7 @@ a.inactive {
 .item_image {
   display: inline-block;
   padding-top: 1em;
+  text-align: center;
 }
 .item_text {
   margin-left: 30px;
