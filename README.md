@@ -14,7 +14,7 @@ Create a `contents.lr` content file pointing to index.html, using a none model
 
 Optionally turn on add Disqus Comments on the blog posts with lektor-disqus-comments plugin. Configure it with [this](https://github.com/lektor/lektor-disqus-comments#lektor-disqus-comments). Also optionally you can have an Atom RSS feed setup for the blog, with the lektor-atom plugin.
 
-Remember, everything here can be overridden. For example, to replace the logo, just drop your own `logo.png` in your projects main `assets/static/images/` directory.
+Remember, everything in this theme can be overridden.
 
 Add params in the `.lektorproject file`. All params are optional unless otherwise specified.
 
@@ -24,6 +24,8 @@ Add params in the `.lektorproject file`. All params are optional unless otherwis
   facebookID = "your_facebook"
   googleanalytics = "your_google_analytics_id"
   linkedInURL = "your_linkedin"
+  # file in assets/static/images/
+  logo_file = "logo.png"
   logo_subtext = "your tagline"
   logo_width = "width for logo <img>"
   pinterestID = "your_pinterest"

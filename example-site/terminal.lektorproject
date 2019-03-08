@@ -1,4 +1,3 @@
-
 [project]
 name = terminal
 url = https://terminallabs.com
@@ -6,12 +5,13 @@ url_style = absolute
 
 
 [theme_settings]
-  linkedInURL = "http://www.linkedin.com/company/terminal-labs"
-  twitterID = "terminal_labs"
-  pinterestID = "terminallabs"
   facebookID = "terminallabs"
-  sticky_flat_page = "Repos/Downloads"
+  linkedInURL = "http://www.linkedin.com/company/terminal-labs"
+  logo_file = "logo.png"
   logo_subtext = "Python Mercenaries"
+  pinterestID = "terminallabs"
+  sticky_flat_page = "Repos/Downloads"
+  twitterID = "terminal_labs"
 
 [packages]
 lektor-slugify = 0.2
