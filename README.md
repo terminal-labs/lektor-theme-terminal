@@ -9,7 +9,7 @@ There is a fully functional example-site you can try out [here](https://github.c
 # Configuration
 
 - **404 Page**:Create a normal `Page` entitled 404.html, with `404.html/contents.lr`.
-- **Social Links**: Create a page of model `Social` and path `social-networks` and add social media links with flowblocks. This page is included in the page.html template and isn't meant for direct display, so it's template is in the include/ directory and it does not have normal style, so add `_hidden: yes` and `_template: includes/social_networks.html` to it's contents.lr file.
+- **Static & Social Links**: Create a page of model `Social` and path `social-networks` and add social media links with flowblocks. This page is included in the page.html template and isn't meant for direct display, so it's template is in the include/ directory and it does not have normal style, so add `_hidden: yes` and `_template: includes/social_networks.html` to it's contents.lr file. In the flowblocks, add any links and they will appear in the top right corner of every page. These links can be external or internal, such as for flat pages.
 - **Disqus**: Turn on add Disqus Comments on the blog posts with lektor-disqus-comments plugin. Configure it with [this](https://github.com/lektor/lektor-disqus-comments#lektor-disqus-comments).
 - **RSS**: Create an Atom RSS feed setup for the blog by using the `lektor-atom` plugin. The templates are ready to go. See the example project here if you need help.
 
@@ -24,7 +24,6 @@ Add params in the `.lektorproject file`. All params are optional unless otherwis
   logo_file = "logo.png"
   logo_subtext = "your tagline"
   logo_width = "width for logo <img>"
-  sticky_flat_page = "Special Flatpage that goes in the top right by the Social Buttons!"
 ```
 
 
