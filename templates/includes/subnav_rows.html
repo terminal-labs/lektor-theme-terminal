@@ -8,30 +8,31 @@
 
     {% set img = subnav_item.images.blocks[0] %}
     {% set thumb = this.record.attachments.images.get(img.image) %}
-    <div class="item_image" style="width: {{ width|string }}px;">
+    <div class="item_image">
       {% if thumb.format == 'svg' or thumb.width >= width %}
         {% set thumb = thumb.thumbnail(width) %}
       {% endif %}
 
+      {% set style_beginning = ' style="width: '|safe ~ width|string ~ 'px;'|safe %}
       {% if img.background_color %}
         {% if img.padding %}
-          {% set img_style = ' style="background-color: '|safe
+          {% set img_style = style_beginning ~ ' background-color: '|safe
           ~ img.background_color
           ~ "; padding: "
           ~ img.padding
           ~ ';"'|safe %}
         {% else %}
-          {% set img_style = ' style="background-color: '|safe
+          {% set img_style = style_beginning ~ ' background-color: '|safe
           ~ img.background_color
           ~ ';"'|safe %}
         {% endif %}
       {% else %}
         {% if img.padding %}
-          {% set img_style = ' style="padding: '|safe
+          {% set img_style = style_beginning ~ ' padding: '|safe
           ~ img.padding
           ~ ';"'|safe %}
         {% else %}
-          {% set img_style = "" %}
+          {% set img_style = style_beginning ~ '"'|safe %}
         {% endif %}
       {% endif %}
 
