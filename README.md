@@ -1,4 +1,4 @@
-# Terminal
+## Terminal
 
 Terminal is a simple Lektor theme made from [terminallabs.com](https://terminallabs.com), which is meant to be evocative of an old Linux terminal; boxy and green on black.
 
@@ -6,7 +6,7 @@ Terminal is a simple Lektor theme made from [terminallabs.com](https://terminall
 
 There is a fully functional example-site you can try out [here](https://github.com/terminal-labs/lektor-theme-terminal/tree/master/example-site).
 
-# Configuration
+## Configuration
 
 - **404 Page**:Create a normal `Page` entitled 404.html, with `404.html/contents.lr`.
 - **Static & Social Links**: Create a page of model `Social` and path `social-networks` and add social media links with flowblocks. This page is included in the page.html template and isn't meant for direct display, so it's template is in the include/ directory and it does not have normal style, so add `_hidden: yes` and `_template: includes/social_networks.html` to it's contents.lr file. In the flowblocks, add any links and they will appear in the top right corner of every page. These links can be external or internal, such as for flat pages.
@@ -24,6 +24,20 @@ Add params in the `.lektorproject file`. All params are optional unless otherwis
   logo_file = "logo.png"
   logo_subtext = "your tagline"
   logo_width = "width for logo <img>"
+```
+
+## Contributing
+
+In addition to being a Lektor theme and all that entails, this theme currently uses lesscss. To install it, you can do:
+
+```shell
+npm install -g less
+```
+
+and to use it to compile css:
+
+```shell
+lessc less/main.less assets/static/css/terminal.css
 ```
 
 
