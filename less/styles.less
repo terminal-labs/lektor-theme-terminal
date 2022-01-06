@@ -3,7 +3,7 @@
 @dark_gray: #202020;
 @light_gray: #808080;
 @lightest_gray: #C0C0C0;
-@white: #F5F5F5;  // Actuall gray99
+@white: gainsboro;
 @default_line_height: 40px;
 @logo_box_height: 28px;
 @grid_width: 980px; // <body> has 8px margin on both sides, effective 964px width
@@ -58,7 +58,7 @@ body {
 }
 .nav_menu {
   float: left;
-  width: (@grid_width - 2* @border_width * @nav_tabs) / @nav_tabs;
+  width: ((@grid_width - 2* @border_width * @nav_tabs) / @nav_tabs);
   height: 40px;
   text-align:center;
   line-height: @default_line_height;

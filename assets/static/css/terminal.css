@@ -8,7 +8,7 @@ footer {
   text-align: right;
 }
 body {
-  color: #f5f5f5;
+  color: gainsboro;
   background-color: black;
   font: 16px prime_regular;
   max-width: 980px;
@@ -51,7 +51,7 @@ body {
 }
 .content_box {
   position: relative;
-  border: 2px solid #2f9a41;
+  border: 2px solid #2F9A41;
   margin-top: 10px;
   padding: 10px;
   overflow: hidden;
@@ -63,7 +63,7 @@ body {
   height: 2px;
   width: 80%;
   margin: 0 auto;
-  background-color: #2f9a41;
+  background-color: #2F9A41;
 }
 .logo_subtext {
   position: relative;
@@ -72,16 +72,16 @@ body {
 }
 .unformatted {
   text-decoration: none;
-  color: #f5f5f5;
+  color: gainsboro;
 }
 a:link,
 a:visited {
-  color: #f5f5f5;
+  color: gainsboro;
   text-decoration: none;
 }
 a:hover,
 a:active {
-  color: #f5f5f5;
+  color: gainsboro;
 }
 a.active,
 a.active a:hover {
@@ -98,10 +98,10 @@ a.inactive {
 .blog-nav a:link,
 .blog-nav a:visited {
   text-decoration: none;
-  color: #f5f5f5;
+  color: gainsboro;
 }
 .green_border {
-  border: 2px solid #2f9a41;
+  border: 2px solid #2F9A41;
 }
 .top_row {
   position: relative;
@@ -111,7 +111,7 @@ a.inactive {
 .logo_box {
   height: 28px;
   padding: 0 8px;
-  border-left: 2px solid #2f9a41;
+  border-left: 2px solid #2F9A41;
 }
 .logo_box:first-child {
   border-left: none;
