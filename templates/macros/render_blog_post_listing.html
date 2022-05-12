@@ -1,0 +1,41 @@
+{% macro render_blog_post_listing(post) %}
+<div class="blog-post-listing-container">
+    <div class="blog-post-listing-body">
+        <div style="display:flex; flex-direction: column">
+            <a href="{{post.path}}">
+                <h3 style="color:#DCDCDC">
+                    {% if post.subtitle %}
+                    {{ post.title }}: {{ post.subtitle }}
+                    {% else %}
+                    {{ post.title }}
+                    {% endif %}
+                </h3>
+            </a>
+            <div>
+                <p style="margin-top: 1.5rem">{{post.author}} -  {{post.pub_date}}</p>
+            </div>
+        </div>
+        <div style="margin-top:1rem;display: flex">
+            {% if post.thumbnail %}
+            {% set thumbnail_url = post.path ~ "/" ~ post.thumbnail %}
+            {% else %}
+            {% set thumbnail_url = '/static/images/logo.svg'%}
+            {% endif %}
+            <img src="{{ thumbnail_url|url }}" style="max-width:100%; max-height: 200px;margin-left: auto; margin-right: auto">
+        </div>
+    </div>
+    <div>
+
+    </div>
+    <div class="full-width flex flex-start">
+        {% for tag in post.categories %}
+        {% set category = site.get('/blog-categories/' + tag) %}
+        <div class="tag-container">
+            <a href="{{category|url}}" style="color:#DCDCDC">
+                {{category.name}}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endmacro %}
