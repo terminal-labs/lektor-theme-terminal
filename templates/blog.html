@@ -10,7 +10,7 @@
     {% if config.PACKAGES['lektor-atom'] %}
       <div id='rss-link'><p><a type=application/atom+xml href="{{ '@atom/feed'|url }}">Atom RSS Feed</a></p></div>
     {% endif %}
-    <div ><p><a href="{{ site.get('/blog-categories/')|url }}">See All Tags</a></p></div>
+    <div ><p><a href="{{ '/tags/'|url }}">See All Tags</a></p></div>
     {{ this.body }}
     {% for child in this.pagination.items.order_by('-pub_date', '-title') %}
     {{ render_blog_post_listing(child)}}
