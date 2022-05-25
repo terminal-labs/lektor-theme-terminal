@@ -7,10 +7,10 @@
         All Tags:
     </h4>
     <div class="flex">
-        {% for category in this.children %}
+        {% for tag in site.get('/blog/').children.distinct("tags") %}
         <div class="tag-container">
-            <a href="{{category|url}}" style="color:#DCDCDC">
-                {{category.name}}
+            <a href="{{ ('/blog@tag/' ~ tag)|url }}" style="color:#DCDCDC">
+                {{tag}}
             </a>
         </div>
         {% endfor %}
