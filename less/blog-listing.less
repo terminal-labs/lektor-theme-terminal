@@ -1,4 +1,11 @@
-.blog-post-listing-container {
+.blog-listing-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    flex: 1;
+}
+
+.blog-post-listing-container-half {
     text-decoration: none;
     color: gainsboro;
     max-width: 100%;
@@ -7,6 +14,23 @@
     border-style:solid;
     margin: 2rem 1rem;
     padding:2rem;
+    flex: 1 1 46%;
+    box-sizing: border-box;
+}
+
+.blog-post-listing-container-full {
+    text-decoration: none;
+    color: gainsboro;
+    max-width: 100%;
+    border-width: 4px;
+    border-color:#e7ff6e;
+    border-style:solid;
+    margin: 2rem 1rem;
+    padding:2rem;
+    //grid-column: span 2;
+    width: 100%;
+    box-sizing: border-box;
+
 }
 
 .blog-post-listing-body {

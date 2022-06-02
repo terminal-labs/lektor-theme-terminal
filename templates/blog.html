@@ -12,9 +12,11 @@
     {% endif %}
     <div ><p><a href="{{ '/tags/'|url }}">See All Tags</a></p></div>
     {{ this.body }}
-    {% for child in this.pagination.items.order_by('-pub_date', '-title') %}
-    {{ render_blog_post_listing(child)}}
-    {% endfor %}
+    <div class="blog-listing-container">
+      {% for child in this.pagination.items.order_by('-pub_date', '-title') %}
+      {{ render_blog_post_listing(child)}}
+      {% endfor %}
+    </div>
 
     {% if this.pagination.pages > 1 %}
       {{ render_pagination(this.pagination) }}
