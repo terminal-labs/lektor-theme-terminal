@@ -1,5 +1,10 @@
 {% macro render_blog_post_listing(post) %}
-<div class="blog-post-listing-container">
+{% if post.thumbnail %}
+{% set class = "blog-post-listing-container-full" %}
+{% else %}
+{% set class = "blog-post-listing-container-half" %}
+{% endif %}
+<div class="{{class}}">
     <div class="blog-post-listing-body">
         <div style="display:flex; flex-direction: column">
             <a href="{{post.path}}">
@@ -18,10 +23,8 @@
         <div style="margin-top:1rem;display: flex">
             {% if post.thumbnail %}
             {% set thumbnail_url = post.path ~ "/" ~ post.thumbnail %}
-            {% else %}
-            {% set thumbnail_url = '/static/images/logo.svg'%}
-            {% endif %}
             <img src="{{ thumbnail_url|url }}" style="max-width:100%; max-height: 200px;margin-left: auto; margin-right: auto">
+            {% endif %}
         </div>
     </div>
     <div>
