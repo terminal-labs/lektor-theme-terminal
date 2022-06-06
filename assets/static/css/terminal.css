@@ -59,6 +59,9 @@
   margin: 0.3rem;
   font-size: 0.9rem;
 }
+.tag-container a {
+  color: gainsboro;
+}
 .full-width {
   width: 100%;
 }
@@ -256,7 +259,6 @@ a.inactive {
 .content_box a:link,
 .content_box a:visited {
   text-decoration: underline;
-  color: #808080;
 }
 .blog-nav a:link,
 .blog-nav a:visited {
