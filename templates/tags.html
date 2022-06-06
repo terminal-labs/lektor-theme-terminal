@@ -9,7 +9,7 @@
     <div class="flex">
         {% for tag in site.get('/blog/').children.distinct("tags") %}
         <div class="tag-container">
-            <a href="{{ ('/blog@tag/' ~ tag)|url }}" style="color:#DCDCDC">
+            <a href="{{ ('/blog@tag/' ~ tag)|url }}" class="white">
                 {{tag}}
             </a>
         </div>
