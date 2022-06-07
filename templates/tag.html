@@ -11,9 +11,11 @@
     {% endif %}
     <div ><p><a href="{{ '/tags/'|url }}">See All Tags</a></p></div>
     <h2>Terminal Labs Blog Posts:</h2>
-    {% for child in this.items %}
-    {{ render_blog_post_listing(child)}}
-    {% endfor %}
+    <div class="blog-listing-container">
+        {% for child in this.items %}
+        {{ render_blog_post_listing(child)}}
+        {% endfor %}
+    </div>
 </div>
 {% endblock content %}
 
