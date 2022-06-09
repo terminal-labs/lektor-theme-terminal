@@ -52,6 +52,10 @@
   flex-wrap: wrap;
   padding: 1rem 1.5rem;
 }
+.blog-post-listing-body div {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
 .tag-container {
   border: 2px solid #2F9A41;
   width: fit-content;
