@@ -5,3 +5,8 @@ pub_date: 2018-03-16
 author: Joseph Nix
 ---
 body: This is an example blog post.  Not much here but that's not the point :)
+---
+tags:
+
+tag1
+tag2
