@@ -1,0 +1,47 @@
+{% set img = this.record.attachments.images.get(this.content_image) %}
+
+{% if this.link.url %}
+<a href="{{this.link}}" style="text-decoration: none; color: gainsboro; width:100%" target="_blank;">
+    <div class="content_box partner-main-content" style="border-color: {{this.border_color}}">
+        {% set img = this.record.attachments.images.get(this.tl_logo_image) %}
+        {% set style_beginning = ' style="width: '|safe
+        ~ this.tl_logo_image_width|string ~ 'px; "'|safe %}
+        {% set img_style = style_beginning %}
+
+        <img draggable="false" src="{{ img.thumbnail(this.tl_logo_image_width)|url }}" {{img_style}} />
+
+        <center>
+            <h3>{{ this.hero_main_section }}</h3>
+            <h4>{{ this.hero_sub_section }}</h4>
+        </center>
+
+        {% set img = this.record.attachments.images.get(this.partner_logo_image) %}
+        {% set style_beginning = ' style="width: '|safe
+        ~ this.partner_logo_image_width|string ~ 'px; float: right;"'|safe %}
+        {% set img_style = style_beginning %}
+
+        <img draggable="false" src="{{ img.thumbnail(this.partner_logo_image_width)|url }}" {{img_style}} />
+    </div>
+</a>
+{% else %}
+<div class="content_box partner-main-content" style="width: 100%;border-color: {{this.border_color}}">
+    {% set img = this.record.attachments.images.get(this.tl_logo_image) %}
+    {% set style_beginning = ' style="width: '|safe
+    ~ this.tl_logo_image_width|string ~ 'px; "'|safe %}
+    {% set img_style = style_beginning %}
+
+    <img draggable="false" src="{{ img.thumbnail(this.tl_logo_image_width)|url }}" {{img_style}} />
+
+    <center>
+        <h3>{{ this.hero_main_section }}</h3>
+        <h4>{{ this.hero_sub_section }}</h4>
+    </center>
+
+    {% set img = this.record.attachments.images.get(this.partner_logo_image) %}
+    {% set style_beginning = ' style="width: '|safe
+    ~ this.partner_logo_image_width|string ~ 'px; float: right;"'|safe %}
+    {% set img_style = style_beginning %}
+
+    <img draggable="false" src="{{ img.thumbnail(this.partner_logo_image_width)|url }}" {{img_style}} />
+</div>
+{% endif %}

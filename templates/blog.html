@@ -2,6 +2,7 @@
 
 {% from "macros/blog.html" import render_blog_post %}
 {% from "macros/blog.html" import render_blog_sibling_nav %}
+{% from "macros/render_blog_post_listing.html" import render_blog_post_listing %}
 {% from "macros/pagination.html" import render_pagination %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block content %}
@@ -9,18 +10,13 @@
     {% if config.PACKAGES['lektor-atom'] %}
       <div id='rss-link'><p><a type=application/atom+xml href="{{ '@atom/feed'|url }}">Atom RSS Feed</a></p></div>
     {% endif %}
+    <div ><p><a href="{{ '/tags'|url }}">See All Tags</a></p></div>
     {{ this.body }}
-    {% for child in this.pagination.items.order_by('-pub_date', '-title') %}
-      <p>
-        <a href="{{ child.path }}">
-          {% if child.subtitle %}
-            {{ child.title }}: {{ child.subtitle }}
-          {% else %}
-            {{ child.title }}
-          {% endif %}
-        </a>
-      </p>
-    {% endfor %}
+    <div class="blog-listing-container">
+      {% for child in this.pagination.items.order_by('-pub_date', '-title') %}
+      {{ render_blog_post_listing(child)}}
+      {% endfor %}
+    </div>
 
     {% if this.pagination.pages > 1 %}
       {{ render_pagination(this.pagination) }}
