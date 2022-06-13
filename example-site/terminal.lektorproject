@@ -14,6 +14,7 @@ url_style = absolute
   twitterID = "terminal_labs"
 
 [packages]
-lektor-slugify = 0.2
+lektor-slugify = 0.4
 lektor-disqus-comments = 0.2
-lektor-atom = 0.2
+lektor-tags = 0.5.0
+lektor-atom = 0.4.0

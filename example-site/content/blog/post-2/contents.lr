@@ -1,3 +1,23 @@
 title: post 2
 ---
 pub_date: 2018-04-15
+---
+author: Blog (Arthur) Author
+---
+body:
+
+This is some blog post
+
+- markdown
+- content
+---
+subtitle: Informative subtitle
+---
+tags:
+
+tag1
+tag2
+---
+twitter_handle: tweepy
+---
+thumbnail: terminallabs-logo-white-bug.svg
