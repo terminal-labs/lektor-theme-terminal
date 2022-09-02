@@ -19,25 +19,13 @@ Add params in the `.lektorproject file`. All params are optional unless otherwis
 
 ```ini
 [theme_settings]
-  googleanalytics = "your_google_analytics_id"
-  # file in assets/static/images/
-  logo_file = "logo.png"
-  logo_subtext = "your tagline"
-  logo_width = "width for logo <img>"
-```
-
-## Contributing
-
-In addition to being a Lektor theme and all that entails, this theme currently uses lesscss. To install it, you can do:
-
-```shell
-npm install -g less
-```
-
-and to use it to compile css:
-
-```shell
-lessc less/main.less assets/static/css/terminal.css
+googleanalytics = your_google_analytics_id
+logo_subtext = your tagline
+twitterID = your_twitter
+linkedInURL = your_linkedin
+facebookID = your_facebook
+pinterestID = your_pinterest
+sticky_flat_page = Special Flatpage that goes in the top right by the Social Buttons!
 ```
 
 
