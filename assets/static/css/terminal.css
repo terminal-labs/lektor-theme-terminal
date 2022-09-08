@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 1;
 }
 .blog-post-listing-container-half {
   text-decoration: none;
@@ -49,7 +48,6 @@
   border-color: #e7ff6e;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
-  flex-wrap: wrap;
   padding: 1rem 1.5rem;
 }
 .blog-post-listing-body div {
@@ -71,15 +69,10 @@
 }
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 .flex-column {
   flex-direction: column;
-}
-.flex-start {
-  justify-content: start;
-}
-.flex-center {
-  justify-content: center;
 }
 .margin-15 {
   margin: 15px;
