@@ -7,7 +7,7 @@
         All Tags:
     </h4>
     <div class="flex">
-        {% for tag in site.get('/blog/').children.distinct("tags") %}
+        {% for tag in site.get('/blog/').children.distinct("tags")|sort %}
         <div class="tag-container">
             <a href="{{ ('/blog@tag/' ~ tag)|url }}" class="white">
                 {{tag}}
