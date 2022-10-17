@@ -39,10 +39,8 @@
   {% endblock subnavbar %}
 
   <div class="content_box">
-    <div>
-      {{this.body}}
-    </div>
     {% block body_content %}
+      {{ this.body }}
     {% endblock body_content %}
   </div>
 {% endblock content %}
