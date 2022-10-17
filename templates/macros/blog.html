@@ -16,10 +16,13 @@
       written by
       {% if post.twitter_handle %}
         <a href="https://twitter.com/{{ post.twitter_handle }}">
-          {{ post.author or post.twitter_handle }}
+          {{ post.author or post.twitter_handle -}}
         </a>
-      {% else %}
-        {{ post.author }}
+      {%- else %}
+        {{ post.author -}}
+      {% endif %}
+      {%- if post.editor -%}
+      , edited by {{ post.editor }}
       {% endif %}
       on {{ post.pub_date }}
     </p>
