@@ -1,0 +1,20 @@
+{% extends "page.html" %}
+{% from "macros/blog.html" import render_blog_post %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block content %}
+<div class="content_box pb-4">
+    <h4 class="ml-2">
+        All Tags:
+    </h4>
+    <div class="flex">
+        {% for tag in site.get('/blog/').children.distinct("tags")|sort %}
+        <div class="tag-container">
+            <a href="{{ ('/blog@tag/' ~ tag)|url }}" class="white">
+                {{tag}}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock content %}

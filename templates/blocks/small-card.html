@@ -1,0 +1,25 @@
+{% set img = this.record.attachments.images.get(this.content_image) %}
+{% if this.link.url %}
+<a href="{{this.link}}" style="text-decoration: none; color: gainsboro" target="_blank">
+    <div class="content_box margin-15 " style="border-color: {{this.border_color}}; min-width: 400px;width: 40%">
+        <div class="partner-content-header">
+            {% if img %}
+            <img draggable="false" src="{{ img.thumbnail(50)|url }}"/>
+            {% endif %}
+            <h4>{{ this.content_title }}</h4>
+        </div>
+        <p>{{ this.content_body }}</p>
+    </div>
+</a>
+{% else %}
+<div class="content_box margin-15 " style="border-color: {{this.border_color}}; min-width: 400px;width: 40%">
+    <div class="partner-content-header">
+        {% if img %}
+        <img draggable="false" src="{{ img.thumbnail(50)|url }}"/>
+        {% endif %}
+        <h4>{{ this.content_title }}</h4>
+    </div>
+    <p>{{ this.content_body }}</p>
+</div>
+{% endif %}
+

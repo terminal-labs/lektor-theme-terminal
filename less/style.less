@@ -3,6 +3,7 @@
 @dark_gray: #202020;
 @light_gray: #808080;
 @lightest_gray: #C0C0C0;
+@white: gainsboro;
 @default_line_height: 40px;
 @logo_box_height: 28px;
 @grid_width: 980px; // <body> has 8px margin on both sides, effective 964px width
@@ -10,7 +11,7 @@
 @med_width: 740px;
 @grid_min: 536px;
 @border_width: 2px;
-@nav_tabs: 7;
+@nav_tabs: 8;
 
 html {
   padding: 0 8px;
@@ -18,11 +19,11 @@ html {
 footer {
   display: block;
   margin: 20px;
-  font-size: 10px;
+  font-size: 14px;
   text-align: right;
 }
 body {
-  color: @lightest_gray;
+  color: @white;
   background-color: black;
   font: @std_font;
   max-width: @grid_width;
@@ -57,7 +58,7 @@ body {
 }
 .nav_menu {
   float: left;
-  width: (@grid_width - 2* @border_width * @nav_tabs) / @nav_tabs;
+  width: ((@grid_width - 2* @border_width * @nav_tabs) / @nav_tabs);
   height: 40px;
   text-align:center;
   line-height: @default_line_height;
@@ -78,23 +79,21 @@ body {
   margin: 0 auto;
   background-color: @std_green;
 }
-#logo_box {
-  width: 194px;
-}
 .logo_subtext {
-  text-align:center;
+  position: relative;
+  left: 50px;
   font-size: 12px;
 }
 .unformatted {
   text-decoration: none;
-  color: @lightest_gray;
+  color: @white;
 }
 a:link, a:visited {
-  color: @lightest_gray;
+  color: @white;
   text-decoration: none;
 }
 a:hover, a:active {
-  color: @lightest_gray;
+  color: @white;
 }
 a.active, a.active a:hover {
   text-decoration: underline;
@@ -104,7 +103,6 @@ a.inactive {
 }
 .content_box a:link, .content_box a:visited {
   text-decoration: underline;
-  color: @light_gray;
 }
 .blog-nav a:link, .blog-nav a:visited {
   .unformatted;
@@ -147,6 +145,7 @@ a.inactive {
 .item_image {
   display: inline-block;
   padding-top: 1em;
+  text-align: center;
 }
 .item_text {
   margin-left: 30px;

@@ -1,6 +1,7 @@
 <a draggable="false" href="/">
   <div id="logo_box">
-    <img draggable="false" src="{{ '/static/images/logo.png'|asseturl }}">
+    <img draggable="false" src="{{ ('/static/images/' ~ config.THEME_SETTINGS.logo_file)|asseturl }}"
+         style="width: {{ config.THEME_SETTINGS.logo_width }};">
     <div class="logo_subtext">{{ config.THEME_SETTINGS.logo_subtext }}</div>
   </div>
 </a>
